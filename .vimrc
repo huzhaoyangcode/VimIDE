@@ -55,10 +55,7 @@ let g:ycm_complete_in_comments=1
 let g:ycm_confirm_extra_conf=0
 " 开启 YCM 标签补全引擎
 let g:ycm_collect_identifiers_from_tags_files=1
-" 引入 C++ 标准库tags
-"set tags+=/data/misc/software/misc./vim/stdcpp.tags
 " YCM 集成 OmniCppComplete 补全引擎，设置其快捷键
-"inoremap <leader>; <C-x><C-o>
 inoremap <leader>, <C-x><C-o>
 " 补全内容不以分割子窗口形式出现，只显示补全列表
 set completeopt-=preview
@@ -166,3 +163,7 @@ map <Leader>bl :MBEToggle<cr>
 " buffer 切换快捷键
 map <Leader>bn :MBEbn<cr>
 map <Leader>bp :MBEbp<cr>
+
+"复制和粘贴到外面，需要下载sudo apt-get install xclip
+vmap <Leader><Leader>y :!xclip -f -sel clip<CR>
+map <Leader><Leader>p :r!xclip -o<CR>

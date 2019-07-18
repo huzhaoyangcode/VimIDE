@@ -167,3 +167,6 @@ map <Leader>bp :MBEbp<cr>
 "复制和粘贴到外面，需要下载sudo apt-get install xclip
 vmap <Leader><Leader>y :!xclip -f -sel clip<CR>
 map <Leader><Leader>p :r!xclip -o<CR>
+"格式化代码
+nmap <leader>z2 <ESC>:set equalprg=astyle\ --style=linux\ -s4\ \ -m3\ -k3\ -p\ -j\ -H\ -U\ -S\ -c\ -w\ -Y\ -xe\ -xy\ -L\ -xC80\ --mode=c<CR>
+nmap <leader>z1 <ESC>:set equalprg=<CR>
